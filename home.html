@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magical Archives</title>
+    
+    <!-- Importing Literary / Magical Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --gold: #d4af37;
+            --gold-bright: #f3e5ab;
+            --bg-dark: #0d0a0b;
+            --glow: rgba(212, 175, 55, 0.3);
+        }
+
+        body {
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+            background-color: var(--bg-dark);
+            /* Wand-light radial glow in the background */
+            background-image: radial-gradient(circle at center, #2a1f1a 0%, #0d0a0b 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'IM Fell English', serif;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 450px; /* Constrained width for mobile-first feel */
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .decorative-header {
+            text-align: center;
+            color: var(--gold);
+            margin-bottom: 10px;
+        }
+
+        .ornament {
+            font-size: 1.2rem;
+            letter-spacing: 8px;
+            opacity: 0.8;
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--gold-bright);
+            margin: 0;
+            text-shadow: 0 0 15px var(--glow);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        /* Base Button Styles - Mimics leather-bound book covers */
+        .btn {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            border: 2px solid var(--gold);
+            border-radius: 6px;
+            box-shadow: inset 0 0 15px rgba(0,0,0,0.9), 0 6px 15px rgba(0,0,0,0.6);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        /* Magical shine hover effect */
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0; left: -100%; width: 50%; height: 100%;
+            background: linear-gradient(to right, transparent, rgba(243, 229, 171, 0.15), transparent);
+            transform: skewX(-20deg);
+            transition: 0.6s;
+        }
+
+        .btn:hover::before, .btn:active::before {
+            left: 150%;
+        }
+
+        .btn:hover, .btn:active {
+            transform: translateY(-3px);
+            box-shadow: inset 0 0 15px rgba(0,0,0,0.9), 0 0 20px var(--glow);
+            border-color: var(--gold-bright);
+        }
+
+        /* Main Button Specifics (Deep Crimson / Gryffindor feel) */
+        .main-btn {
+            background: linear-gradient(135deg, #5c0f14, #220305);
+            padding: 25px 20px;
+            margin-bottom: 10px;
+        }
+
+        .main-btn .title {
+            font-family: 'Cinzel', serif;
+            font-size: 2.2rem;
+            color: var(--gold-bright);
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.8);
+        }
+
+        /* Secondary Buttons Specifics (Deep Midnight/Library Green-Blue feel) */
+        .secondary-btn {
+            background: linear-gradient(135deg, #1b262c, #090e11);
+            padding: 18px 15px;
+        }
+
+        .secondary-btn .title {
+            font-family: 'Cinzel', serif;
+            font-size: 1.1rem;
+            color: var(--gold);
+            margin-bottom: 6px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        .secondary-btn .details {
+            font-size: 1.1rem;
+            color: #d1bfae; /* Aged parchment color */
+            font-style: italic;
+        }
+        
+        .secondary-btn .sub-details {
+            font-family: 'Cinzel', serif;
+            font-size: 0.9rem;
+            color: var(--gold);
+            margin-top: 6px;
+            opacity: 0.8;
+            letter-spacing: 2px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <div class="decorative-header">
+            <div class="ornament">✧ ✦ ✧</div>
+            <h1>Eclatineers</h1>
+        </div>
+
+        <!-- Main Button -->
+        <a href="https://andrewveda.com/eclatineers/" class="btn main-btn">
+            <span class="title">Magazine</span>
+        </a>
+
+        <!-- Secondary Button 1 -->
+        <a href="https://andrewveda.com/eclatineers/association_activity_1" class="btn secondary-btn">
+            <span class="title">Association Activity</span>
+            <span class="details">10 September 2026</span>
+            <span class="sub-details">ECE-2 &bull; ECE-3</span>
+        </a>
+
+        <!-- Secondary Button 2 -->
+        <a href="https://andrewveda.com/eclatineers/association_activity_2" class="btn secondary-btn">
+            <span class="title">Association Activity</span>
+            <span class="details">17 September 2026</span>
+            <span class="sub-details">ECE-1</span>
+        </a>
+
+    </div>
+
+</body>
+</html>
